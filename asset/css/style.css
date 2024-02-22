@@ -1,6 +1,8 @@
-
+body {
+    background-image: img src="image internet/1046420.png";
+}
 .cc-navbar{
-    background-color:rgb(107, 77, 13);
+    background-color:rgb(47, 107, 13);
 }
 
 
@@ -8,3 +10,5 @@
 .banner{
 background-image: img src="image internet/1046420.png"
 }
+
+
