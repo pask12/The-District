@@ -24,13 +24,15 @@ background-color: rgb(250, 237, 51) ;
 .text-over{
 position: absolute;
 left: 50%;
-top: 50%;
+top: 30%;
 }
 
 .text-over-recherche{
     position: absolute;
+    display: flex;
     left: 50%;
     top: 50%;
+    width: 25%;
     }
 .image1{
     position: relative;
