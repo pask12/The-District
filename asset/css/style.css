@@ -21,4 +21,17 @@ background-color: rgb(250, 237, 51) ;
 
 }
 
-/* page accueil*/
+.text-over{
+position: absolute;
+left: 50%;
+top: 50%;
+}
+
+.text-over-recherche{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    }
+.image1{
+    position: relative;
+    }
