@@ -37,6 +37,10 @@ top: 30%;
 .image1{
     position: relative;
     }
-    body{
-        background-color: blue;
+
+ body{
+    background-color: #47B4D1;
     }
+ section{
+    margin-top: 15%;
+ }   
