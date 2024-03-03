@@ -20,13 +20,22 @@ background-color: rgb(250, 237, 51) ;
     z-index: 0;
 
 }
-
+/* carte les plats */
+.card {
+    height: 600px;
+    width: 20rem;
+}
 .text-over{
 position: absolute;
 left: 50%;
 top: 30%;
 }
-
+.envoi{
+    /* position: absolute; */
+    /* left: 50%;
+    top: 30%; */
+    margin-top: 3%;
+    }
 .text-over-recherche{
     position: absolute;
     display: flex;
