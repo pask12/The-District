@@ -25,7 +25,8 @@ html{
     /* position: absolute; */
     /* left: 50%;
     top: 30%; */
-    margin-top: 3%;
+    margin-top: 15%;
+    
     }
 
 .image1{
@@ -52,5 +53,15 @@ html{
     top: 48%;
     left: 60%;
     width: 20rem;
-    position: ;
+    
+ }
+
+/* card */
+
+.card{
+    transition: all 0.3s;
+}
+
+ .card:hover{
+    transform:scale(1.15);
  }
