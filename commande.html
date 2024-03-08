@@ -78,32 +78,36 @@
 
 
         <div class="d-flex justify-content-center mt-5">
-          <form action="#" method="post">
+          <form action="#" method="POST" id="formulaire">
             <div class="row d-inline-flex p-2">
               <div class="col">
                 <label for="inputAddress">Nom</label>
                 <input type="text" class="form-control" placeholder="Nom" id="nom">
-                <div id="nomChamp" class="form-text text-danger">
-                  Ce champ est obligatoire.
+                <!-- <div id="nomChamp" class="form-text text-danger">
+                  Ce champ est obligatoire. -->
+                  <p id="erreur1" style="color: red;"></p>
                 </div>
-              </div>
+              <!-- </div> -->
               <div class="col">
                 <label for="inputAddress">Prénom</label>
                 <input type="text" class="form-control" placeholder="Prénom" id="prenom">
-              </div>"
+                <p id="erreur2" style="color: red;"></p>
+              </div>
             </div>
             <br>
             <div class="row d-inline-flex p-2">
               <div class="col">
                 <label for="inputAddress">Email</label>
                 <input type="text" class="form-control" placeholder="Email" id="email">
+                <p id="erreur3" style="color: red;"></p>
               </div>
               <div class="col">
                 <label for="inputAddress">Téléphone</label>
                 <input type="text" class="form-control" placeholder="Téléphone" id="telephone">
-                <div id="nomChamp" class="form-text text-danger">
+                <p id="erreur4" style="color: red;"></p>
+                <!-- <div id="nomChamp" class="form-text text-danger">
                   Ce champ est obligatoire.
-                </div>
+                </div> -->
               </div>
             </div>
             <br>
@@ -111,6 +115,7 @@
               <div class="form-group">
                 <label for="exampleFormControlTextarea1">Votre adresse</label>
                 <textarea class="form-control" id="adresse" rows="3"></textarea>
+                <p id="erreur5" style="color: red;"></p>
               </div>
               <div class="d-flex justify-content-center">
                 <button type="submit" class="envoi btn btn-primary mb-2" id="bouton">Envoyer</button>
@@ -162,7 +167,10 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-      <script src="asset/js/commande.js"></script>
+      <script src="asset/js/commandejquery.js"></script>
+     <!-- <script src="asset/js/commandejavascript.js"></script> -->
+     </script>
+      
   </footer>
   </body>
 
