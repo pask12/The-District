@@ -5,7 +5,7 @@ $(document).ready(function()
   let envoi=true;
 
   let prenom=$("#prenom").val();
-  let nom = $('#nom').val();
+  let nom =$('#nom').val();
   if(prenom == "")
   {
     envoi=false;
