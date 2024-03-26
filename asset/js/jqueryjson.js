@@ -122,53 +122,110 @@ $(document).ready(function(){
 
 
     });
-    // pour la barre de recherche
+    /* pour la barre de recherche */
 
-    let resultats = $('#resultats');
+    // let resultats = $('#resultats');
 
-    $("#recherche").on("keyup", function()
+    // $("#recherche").on("keyup", function()
 
-    {
-        let motCle = document.getElementById("recherche").value;
-        console.log(motCle);
-        let plats = jQuery.grep(data.plat, function(n, i) {
-          if (n.libelle.indexOf(motCle) != -1 || n.description.indexOf(motCle) != -1) {
-            return n;
-          }
-        });
+    // {
+    //     let motCle = document.getElementById("recherche").value;
+    //     console.log(motCle);
+    //     let plats = jQuery.grep(data.plat, function(n, i) {
+    //       if (n.libelle.indexOf(motCle) != -1 || n.description.indexOf(motCle) != -1) {
+    //         return n;
+    //       }
+    //     });
 
-        plats.forEach(plat => {
-          let element = document.createElement('div'); 
-          element.className = "col-3 p-0 d-flex justify-content-center mb-5 me-5 "
+    //     plats.forEach(plat => {
+    //       let element = document.createElement('div'); 
+    //       element.className = "col-3 p-0 d-flex justify-content-center mb-5 me-5 "
 
-          let cardcategorie = document.createElement('div');
-          cardcategorie.className = "card ";
+    //       let cardcategorie = document.createElement('div');
+    //       cardcategorie.className = "card ";
   
-          let imgcategorie = document.createElement('img');
-          imgcategorie.src = plat.image
-          imgcategorie.className = "card-img-top ";
-          imgcategorie.style = "height : 20rem; width : 30rem"
+    //       let imgcategorie = document.createElement('img');
+    //       imgcategorie.src = plat.image
+    //       imgcategorie.className = "card-img-top ";
+    //       imgcategorie.style = "height : 20rem; width : 30rem"
 
-          let libelle = document.createElement('h3');
-          libelle.textContent = plat.libelle ;
-          libelle.className = "card-title p-3 pb-0";
+    //       let libelle = document.createElement('h3');
+    //       libelle.textContent = plat.libelle ;
+    //       libelle.className = "card-title p-3 pb-0";
 
-          let description = document.createElement('p');
-          description.textContent = plat.description;
-          description.className = "card-text p-3 pt-0";
+    //       let description = document.createElement('p');
+    //       description.textContent = plat.description;
+    //       description.className = "card-text p-3 pt-0";
 
-          let commander = document.createElement('a');
-          commander.textContent = "commander";
-          commander.className = "btn btn-primary w-50 mx-auto mb-4";
-          commander.href = "commande.html?id=" + plat.id_plat;
+    //       let commander = document.createElement('a');
+    //       commander.textContent = "commander";
+    //       commander.className = "btn btn-primary w-50 mx-auto mb-4";
+    //       commander.href = "commande.html?id=" + plat.id_plat;
 
-          resultats.append(element);
-          element.append(cardcategorie);
-          cardcategorie.append(imgcategorie, libelle, description, commander);
+    //       resultats.append(element);
+    //       element.append(cardcategorie);
+    //       cardcategorie.append(imgcategorie, libelle, description, commander);
+
+
+
+            const motcle = document.querySelector('#recherche')
+            console.log(motcle);  
+            motcle.addEventListener('keydown' , function() {
+              const inputValue = motcle.value.toLowerCase();
+
+
+              $.get('fichier.json', function (data) {
+
+                const plats = data.plat.filter(plat => plat.libelle.toLowerCase().includes(inputValue))
+    
+                console.log(plats);
+    
+                const list = document.querySelector('#resultats')
+    
+                list.innerHTML = '';
+
+
+              plats.forEach(plat => {
+
+
+                let element = document.createElement('div'); 
+                element.className = "col-3 p-0 d-flex justify-content-center mb-5 me-5 "
+      
+                let cardcategorie = document.createElement('div');
+                cardcategorie.className = "card ";
+        
+                let imgcategorie = document.createElement('img');
+                imgcategorie.src = plat.image
+                imgcategorie.className = "card-img-top ";
+                imgcategorie.style = "height : 20rem; width : 30rem"
+      
+                let libelle = document.createElement('h3');
+                libelle.textContent = plat.libelle ;
+                libelle.className = "card-title p-3 pb-0";
+      
+                let description = document.createElement('p');
+                description.textContent = plat.description;
+                description.className = "card-text p-3 pt-0";
+      
+                let commander = document.createElement('a');
+                commander.textContent = "commander";
+                commander.className = "btn btn-primary w-50 mx-auto mb-4";
+                commander.href = "commande.html?id=" + plat.id_plat;
+      
+                list.append(element);
+                element.append(cardcategorie);
+                cardcategorie.append(imgcategorie, libelle, description, commander);
+
+            });
+
+            
         
       
         });
+
+
+
       });
   });
 });
-
+ 
