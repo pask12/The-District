@@ -170,7 +170,7 @@ $(document).ready(function(){
 
             const motcle = document.querySelector('#recherche')
             console.log(motcle);  
-            motcle.addEventListener('keydown' , function() {
+            motcle.addEventListener('keyup' , function() {
               const inputValue = motcle.value.toLowerCase();
 
 
@@ -181,7 +181,7 @@ $(document).ready(function(){
                 console.log(plats);
     
                 const list = document.querySelector('#resultats')
-    
+                list.className = '' ;
                 list.innerHTML = '';
 
 
@@ -189,32 +189,32 @@ $(document).ready(function(){
 
 
                 let element = document.createElement('div'); 
-                element.className = "col-3 p-0 d-flex justify-content-center mb-5 me-5 "
+                element.className = "col-12 p-0 d-flex justify-content-center mb-2"
       
                 let cardcategorie = document.createElement('div');
-                cardcategorie.className = "card ";
+                cardcategorie.className = "card";
         
                 let imgcategorie = document.createElement('img');
                 imgcategorie.src = plat.image
-                imgcategorie.className = "card-img-top ";
-                imgcategorie.style = "height : 20rem; width : 30rem"
+                imgcategorie.className = "card-img-top";
+                imgcategorie.style = "height : 15rem; width : 20rem "
       
                 let libelle = document.createElement('h3');
                 libelle.textContent = plat.libelle ;
-                libelle.className = "card-title p-3 pb-0";
+                libelle.className = "card-title px-1 pb-0 fs-5";
       
-                let description = document.createElement('p');
+           /*       let description = document.createElement('p');
                 description.textContent = plat.description;
-                description.className = "card-text p-3 pt-0";
+                description.className = "card-text p-3 pt-0";  */
       
-                let commander = document.createElement('a');
+          /*       let commander = document.createElement('a');
                 commander.textContent = "commander";
                 commander.className = "btn btn-primary w-50 mx-auto mb-4";
-                commander.href = "commande.html?id=" + plat.id_plat;
+                commander.href = "commande.html?id=" + plat.id_plat; */
       
                 list.append(element);
                 element.append(cardcategorie);
-                cardcategorie.append(imgcategorie, libelle, description, commander);
+                cardcategorie.append(imgcategorie, libelle, /* description , */ /* commander */);
 
             });
 
@@ -222,9 +222,8 @@ $(document).ready(function(){
         
       
         });
-
-
-
+      
+        
       });
   });
 });
