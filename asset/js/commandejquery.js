@@ -9,7 +9,7 @@ $(document).ready(function()
   let email=$('#email').val();
   let telephone=$('#telephone').val();
   let adresse=$('#adresse').val();
-
+  let demande=$('#demande').val();
 
   if(nom == "")
   {
@@ -62,7 +62,7 @@ $(document).ready(function()
 
 
 
- if(adresse == "")
+  if(adresse == "")
  {
   envoi=false;
   console.log("L'adresse est obligatoire");
@@ -73,6 +73,17 @@ $(document).ready(function()
   erreuradresse.textContent = ""
 }
 
+
+ if(demande == "")
+{
+ envoi=false;
+ console.log("La demande est obligatoire");
+
+ erreurdemande = document.querySelector('#erreur6');
+ erreurdemande.textContent= "La demande est obligatoire";
+}else {
+ erreurdemande.textContent = ""
+} 
 
 
   if(envoi==true)

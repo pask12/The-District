@@ -65,3 +65,9 @@ html{
  .card:hover{
     transform:scale(1.15);
  }
+
+/* formulaire contact */
+
+ .contact{
+    margin-bottom: 10rem;
+ }

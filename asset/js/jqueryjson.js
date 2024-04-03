@@ -29,7 +29,7 @@ $(document).ready(function(){
 
       
       let lien = document.createElement('a');
-      lien.href ="platcategorie.html?id=" +data.categorie[i].id_categorie;
+      lien.href ="platcategorie.php?id=" +data.categorie[i].id_categorie;
       
 
       categorie.append(element);
@@ -71,7 +71,7 @@ $(document).ready(function(){
         let commander = document.createElement('a');
         commander.textContent = "commander";
         commander.className = "btn btn-primary w-50 mx-auto mb-4";
-        commander.href = "commande.html?id=" + data.plat[i].id_plat;
+        commander.href = "commande.php?id=" + data.plat[i].id_plat;
         
         plat.append(element);
         element.append(cardcategorie);
@@ -114,7 +114,7 @@ $(document).ready(function(){
         let commander = document.createElement('a');
         commander.textContent = "commander";
         commander.className = "btn btn-primary w-50 mx-auto mb-4";
-        commander.href = "commande.html?id=" + plat.id_plat;
+        commander.href = "commande.php?id=" + plat.id_plat;
 
         plat_cat.append(element);
         element.append(cardcategorie);

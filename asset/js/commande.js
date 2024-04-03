@@ -12,7 +12,7 @@ $.get('fichier.json', function (data) {
     plat.forEach(plat => {
   
         let element = document.createElement('div'); 
-        element.className = "col-10 p-0 d-flex justify-content-center mb-5 me-5 "
+        element.className = "col-10  d-flex justify-content-center mx-auto "
 
         let cardcategorie = document.createElement('div');
         cardcategorie.className = "card ";
@@ -20,7 +20,7 @@ $.get('fichier.json', function (data) {
         let imgcategorie = document.createElement('img');
         imgcategorie.src = plat.image
         imgcategorie.className = "card-img-top ";
-        imgcategorie.style = "height : 20rem; width : 25rem"
+       
 
         let libelle = document.createElement('h3');
         libelle.textContent = plat.libelle ;
@@ -30,14 +30,19 @@ $.get('fichier.json', function (data) {
         description.textContent = plat.description;
         description.className = "card-text p-3 pt-0";
 
-        let commander = document.createElement('a');
-        commander.textContent = "commander";
-        commander.className = "btn btn-primary w-50 mx-auto mb-4";
-        commander.href = "commande.html?id=" + plat.id_plat;
+        // let commander = document.createElement('a');
+        // commander.textContent = "commander";
+        // commander.className = "btn btn-primary w-50 mx-auto mb-4";
+        // commander.href = "commande.html?id=" + plat.id_plat;
+
+        let prix = document.createElement('p');
+        prix.textContent = "prix : " +plat.prix + " €";
+        prix.className = "p-3 justify-content-center d-flex";
+        
 
         plat_commande.append(element);
         element.append(cardcategorie);
-        cardcategorie.append(imgcategorie, libelle, description, commander);
+        cardcategorie.append(imgcategorie, libelle, description, prix);
 
 
     });
