@@ -94,7 +94,7 @@ include('header.php');
             <br>
             <div class="row">
               <div class="form-group">
-                <label for="exampleFormControlTextarea1">Votre demande</label>
+                <label for="demande">Votre demande</label>
                 <textarea class="form-control" id="demande" rows="3"></textarea>
                 <p id="erreur6" style="color: red;"></p>
               </div>

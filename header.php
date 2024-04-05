@@ -22,7 +22,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-3">
             <li class="nav-item pe-4">
               <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
             </li>
